@@ -5,9 +5,85 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <style>
+      div > ul {
+        border: 1px solid gold;
+      }
+
+      #WriteMain > form {
+        border: 1px solid sienna;
+      }
+      .hidden {
+        display: none;
+      }
+      #BTitle {
+      }
+      #BMain {
+        border: 1px solid red;
+      }
+    </style>
   </head>
   <body>
-    <script src="./JavaScript.js"></script>
+    <div id="ListMain">
+      <div>
+        <ul id="ListTitle">
+          글목록
+        </ul>
+      </div>
+      <button id="ListMainBtn">글쓰기</button>
+    </div>
+    <div id="WriteMain" class="hidden">
+      <form action="">
+        <ul>
+          <ol>
+            <textarea
+              id="BTitle"
+              cols="30"
+              placeholder="제목입력"
+              name="제목"
+            ></textarea>
+          </ol>
+          <ol>
+            <textarea
+              name=""
+              id="BMain"
+              cols="30"
+              rows="10"
+              name="글쓰기"
+            ></textarea>
+          </ol>
+          <ol>
+            <button id="saveBtn" name="저장하기">저장</button>
+            <input type="reset" value="취소" name="취소하기" />
+          </ol>
+        </ul>
+      </form>
+    </div>
+    <script>
+      const ListMain = document.querySelector("#ListMain");
+      const WriteMain = document.querySelector("#WriteMain");
+      const ListMainBtn = document.querySelector("#ListMainBtn");
+      const SaveBtn = document.querySelector("#saveBtn");
+
+      const REMOVE_HIDDEN = "hidden";
+
+      function moveWirteMain() {
+        WriteMain.classList.remove(REMOVE_HIDDEN);
+        ListMain.classList.add(REMOVE_HIDDEN);
+      }
+
+      ListMainBtn.addEventListener("click", moveWirteMain);
+      console.log(ListMainBtn);
+
+      function savedFuntion(event) {
+        // event.preventDefault();
+        WriteMain.classList.add(REMOVE_HIDDEN);
+        ListMain.classList.remove(REMOVE_HIDDEN);
+      }
+
+      SaveBtn.addEventListener("click", savedFuntion);
+    </script>
+    <!-- <script src="./JavaScript.js"></script> -->
   </body>
 </html>
