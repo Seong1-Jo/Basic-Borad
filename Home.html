@@ -5,24 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <!-- <link rel="stylesheet" href="style.css" /> -->
-    <style>
-      div > ul {
-        border: 1px solid gold;
-      }
-
-      #WriteMain > form {
-        border: 1px solid sienna;
-      }
-      .hidden {
-        display: none;
-      }
-      #BTitle {
-      }
-      #BMain {
-        border: 1px solid red;
-      }
-    </style>
+    <link rel="stylesheet" href="style.css" />
+    <style></style>
   </head>
   <body>
     <div id="ListMain">
@@ -55,35 +39,12 @@
           </ol>
           <ol>
             <button id="saveBtn" name="저장하기">저장</button>
-            <input type="reset" value="취소" name="취소하기" />
+            <input type="reset" value="리셋" name="취소하기" />
           </ol>
         </ul>
       </form>
     </div>
-    <script>
-      const ListMain = document.querySelector("#ListMain");
-      const WriteMain = document.querySelector("#WriteMain");
-      const ListMainBtn = document.querySelector("#ListMainBtn");
-      const SaveBtn = document.querySelector("#saveBtn");
-
-      const REMOVE_HIDDEN = "hidden";
-
-      function moveWirteMain() {
-        WriteMain.classList.remove(REMOVE_HIDDEN);
-        ListMain.classList.add(REMOVE_HIDDEN);
-      }
-
-      ListMainBtn.addEventListener("click", moveWirteMain);
-      console.log(ListMainBtn);
-
-      function savedFuntion(event) {
-        // event.preventDefault();
-        WriteMain.classList.add(REMOVE_HIDDEN);
-        ListMain.classList.remove(REMOVE_HIDDEN);
-      }
-
-      SaveBtn.addEventListener("click", savedFuntion);
-    </script>
-    <!-- <script src="./JavaScript.js"></script> -->
+    <script></script>
+    <script src="./Main.js"></script>
   </body>
 </html>

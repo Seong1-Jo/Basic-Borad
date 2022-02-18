@@ -1,0 +1,20 @@
+.hidden {
+    display: none;
+  }
+  #ListMain {
+    border: 2px solid red;
+    width: 50%;
+    margin-left: 25%;
+    position: relative;
+  }
+  #ListTitle {
+    border: 1px solid blue;
+  }
+  #ListMainBtn {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  #BMain {
+    border: 1px solid red;
+  }
